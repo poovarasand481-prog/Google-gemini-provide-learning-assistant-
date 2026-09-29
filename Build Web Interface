@@ -1,0 +1,62 @@
+The web interface is the front-end part of the application through which users interact with the system. It provides a simple and user-friendly design for entering data, viewing results, and accessing different features. HTML is used to create the structure, CSS is used for styling, and JavaScript is used to add interactive functionality.
+Simple Coding:<!DOCTYPE html>
+<html>
+<head>
+    <title>LegalEase AI</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        textarea {
+            width: 90%;
+            height: 120px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 25px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>LegalEase AI</h1>
+        <p>Enter your legal document or query:</p>
+
+        <textarea id="inputText"
+                  placeholder="Enter text here..."></textarea><br>
+
+        <button onclick="processText()">Submit</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function processText() {
+            let text = document.getElementById("inputText").value;
+
+            if (text.trim() === "") {
+                document.getElementById("result").innerHTML =
+                    "Please enter some text.";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Your request has been submitted successfully!";
+            }
+        }
+    </script>
+</bodOutput: A simple web page with a title, text input area, Submit button, and result message.y>
